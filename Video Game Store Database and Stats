@@ -1,0 +1,25 @@
+--created a video game store database
+CREATE TABLE video_game_store (id INTEGER, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT INTO video_game_store VALUES 
+(1, "God of War 3", 10, 55, 4),
+(2, "Spyro Trilogy", 4, 60, 7),
+(3, "Dark Souls 1", 7, 30, 4),
+(4, "Dark Souls 2", 9, 30, 4),
+(5, "Dark Souls 3", 6, 30, 4),
+(6, "Animal Crossing: New Horizons", 2, 60, 2),
+(7, "Elden Ring", 1, 60, 4),
+(8, "Tears of the Kingdom", 0, 70, 2),
+(9, "Kingdom Hearts 3", 6, 55, 7),
+(10, "Stray", 3, 20, 7),
+(11, "Celeste", 4, 15, 4),
+(12, "Final Fantasy XV", 3, 40, 7),
+(13, "Hatsune Miku: Project DIVA Mega Mix", 1, 50, 8),
+(14, "DOOM Eternal", 7, 50, 2),
+(15, "The Gecko Gods", 10, 30, 2);
+
+--displayed database ordered by price
+SELECT * FROM video_game_store ORDER BY price;
+
+--what is the summed price of all stocked video games in aisle 4?
+SELECT aisle, SUM(price) FROM video_game_store WHERE aisle = 4 GROUP BY aisle;
