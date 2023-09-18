@@ -18,8 +18,10 @@ INSERT INTO video_game_store VALUES
 (14, "DOOM Eternal", 7, 50, 2),
 (15, "The Gecko Gods", 10, 30, 2);
 
---displayed database ordered by price
+#Analysis
+
+# Display database ordered by price
 SELECT * FROM video_game_store ORDER BY price;
 
---what is the summed price of all stocked video games in aisle 4?
+# what is the summed price of all stocked video games in aisle 4?
 SELECT aisle, SUM(price) FROM video_game_store WHERE aisle = 4 GROUP BY aisle;
