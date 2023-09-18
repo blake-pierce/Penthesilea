@@ -1,4 +1,4 @@
-#Create a video game store database
+# Create a video game store database
 CREATE TABLE video_game_store (id INTEGER, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
 
 INSERT INTO video_game_store VALUES 
